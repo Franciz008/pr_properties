@@ -1,4 +1,7 @@
-这是一个读写properties工具
+## 这是一个读写properties工具
+## 安装:
+pip install pr-properties -i https://pypi.python.org/simple
+
 示例:见测试用例pr_properties/test_case/test_properties.py
 
 ```python
