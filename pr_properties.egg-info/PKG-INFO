@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pr-properties
-Version: 1.7
+Version: 1.7.3
 Summary: This is a read-write properties tool
 Author-email: Franciz <912953887@qq.com>
 Classifier: Programming Language :: Python :: 3
@@ -11,13 +11,12 @@ Description-Content-Type: text/markdown
 License-File: license.txt
 
 这是一个读写properties工具
-示例:见测试用例pr_properties/test_case/test_properties.py
 
 ```python
-from pr_properties import pr_properties
+from pr_properties.properties import Properties
 
 # 创建Properties对象
-p = pr_properties.Properties()
+p = Properties()
 # 读取字符
 str_p = """# 读取字符=1
 master.initialSize=4
@@ -33,15 +32,15 @@ print(p.dumps())
 del p['master.cc']
 print(p.dumps())
 
-# 读取properties文件
-p = pr_properties.Properties()
+# 读写properties文件
+p = Properties()
 p.read(path=r'./pool.properties')
 print(p['master.initialSize'])  # 4
 # 修改
 p['master.initialSize'] = 5
-# 写入,写入后会关闭文件
+# 写入,写入后会关闭文件;写入功能请慎重使用
 p.write()
-p.read(path=r'D:\WORK\PYTHON\my-python-tools\auto_exe\app\pool.properties')
+p.read(path=r'./pool.properties')
 # 验证是否修改
 print(p['master.initialSize'])  # 5
 ```

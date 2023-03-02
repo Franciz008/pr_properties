@@ -1,6 +1,6 @@
 [project]
 name = "pr_properties"
-version = "1.7"
+version = "1.7.3"
 authors = [
   { name="Franciz", email="912953887@qq.com" },
 ]
