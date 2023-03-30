@@ -1,3 +1,6 @@
+安装
+pip install pr-properties
+
 这是一个读写properties工具
 
 ```python
